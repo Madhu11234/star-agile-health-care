@@ -15,9 +15,12 @@ spec:
     spec:
       containers:
         - name: healthapp-container
-          image: madhu112234/healthprod
+          image: madhu112234/healthprod:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 8082
+          env:
+            - name: PORT
+              value: "8082"
 ---
 apiVersion: v1
 kind: Service
@@ -28,6 +31,7 @@ spec:
   selector:
     app: healthapp
   ports:
-    - port: 8080
-      targetPort: 8080
+    - port: 8082
+      targetPort: 8082
       nodePort: 8082
+ 
