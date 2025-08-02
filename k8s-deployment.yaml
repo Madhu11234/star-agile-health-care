@@ -1,3 +1,4 @@
+# k8s-deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -29,4 +30,4 @@ spec:
   ports:
     - port: 8080
       targetPort: 8080
-      nodePort: 8082   # Expose on EC2 public IP at port 8082
+      nodePort: 8082
