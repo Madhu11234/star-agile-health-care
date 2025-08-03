@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: healthprod-container
-        image: madhu112234/healthprod:latest
+        image: madhu112234/healthprod:1.1
         ports:
         - containerPort: 8082
         readinessProbe:
